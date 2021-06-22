@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+:root {
+    --fontFamily: 'Source Sans Pro', sans-serif;
+    --logo: 'Pacifico', cursive;
+    --fontSize: 18px;
+    --white: #fff;
+    --bg: #f4f4f4;
+    --padding: 100px 0;
+    --headings: #444444;
+    --text: #676767;
+    --red: #EF6480;
+    --transition: .3s ease;
+}
+/*************
+basic styles
+*************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    background: var(--bg);
+    color: var(--text);
+    font-weight: 200;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--headings);
+}
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 7px;
+    margin: 50px 0;
+}
+button {
+    border: 2px solid var(--headings);
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 30px;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+button:hover {
+    border: 2px solid var(--red);
+    color: var(--red);
+    transition: var(--transitions);
+}
+/*************
+header
+*************/
+header {
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(images/banner.jpg);
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-family: var(--logo);
+    font-size: 6rem;
+    color: var(--white);
+}
+.underline {
+    width: 35%;
+    height: 2px;
+    background: var(--white);
+    margin: 10px auto 50px auto;
+}
+header p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: .7;
+    letter-spacing: 4px;
+}
+/*************
+intro
+*************/
+.intro {
+    background: var(--white);
+    padding: var(--padding);
+    margin: 100px auto;
+    text-align: center;
+}
+.intro i {
+    border: 2px solid var(--text);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    padding: 50px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    margin: auto;
+}
+.intro p {
+    font-size: 1.4rem;
+    padding-bottom: 30px;
+}
+/*************
+blog
+*************/
+.blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.blog article{
+    flex: 0 0 48%;
+    margin-bottom: 60px;
+}
+.featured-image{
+    position: relative;
+
+}
+.featured-image img{
+    width: 100%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+.featured-image h3{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-shadow:  0 0 3px black;
+    width: 100%;
+}
+.blog .text{
+    background: var(--white);
+    text-align: center;
+    padding: 60px;
+}
+.holder{
+    overflow: hidden;
+}
+.blog a{
+    display: block;
+}
+.blog a:hover{
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+/*************
+footer
+*************/
+footer {
+    text-align: center;
+    padding-bottom: 100px;
+}
+footer p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+footer .underline {
+    width: 10%;
+    background: var(--headings);
+    margin: 100px auto 100px auto;
+}
+footer .copy {
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+footer a {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 10px;
+}
+footer a:hover {
+    color: var(--red);
+    transition: var(--transition);
+}
+/***************
+responsive
+***************/
+@media(max-width:768px){
+    header h1{
+        font-size: 5rem;
+    }
+    header p{
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .blog article{
+        flex: 0 0 100%;
+    }
+    .featured-image h3{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    footer{
+        padding-bottom: 80px;
+    }
+    footer h2{
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    footer .underline {
+        margin: 80px auto 80px auto;
+    }
+}
+@media(max-width:950px){
+    .featured-image h3{
+        font-size: 1.3rem
+    }
+}
